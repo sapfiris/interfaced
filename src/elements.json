@@ -1,40 +1,92 @@
 [{
+    "EnableUp": null,
+    "EnableDown": "D",
+    "EnableRight": "B",
+    "EnableLeft": null,
     "id": "A"
   },
   {
+    "EnableUp": null,
+    "EnableDown": "E",
+    "EnableRight": "C",
+    "EnableLeft": null,
     "id": "B"
   },
   {
+    "EnableUp": null,
+    "EnableDown": "G",
+    "EnableRight": null,
+    "EnableLeft": null,
     "id": "C"
   },
   {
+    "EnableUp": "A",
+    "EnableDown": "K",
+    "EnableRight": null,
+    "EnableLeft": null,
     "id": "D"
   },
   {
+    "EnableUp": "B",
+    "EnableDown": "H",
+    "EnableRight": "F",
+    "EnableLeft": null,
     "id": "E"
   },
   {
+    "EnableUp": null,
+    "EnableDown": "J",
+    "EnableRight": null,
+    "EnableLeft": null,
     "id": "F"
   },
   {
+    "EnableUp": null,
+    "EnableDown": null,
+    "EnableRight": null,
+    "EnableLeft": "F",
     "id": "G"
   },
   {
+    "EnableUp": null,
+    "EnableDown": "L",
+    "EnableRight": null,
+    "EnableLeft": null,
     "id": "H"
   },
   {
+    "EnableUp": "E",
+    "EnableDown": "M",
+    "EnableRight": null,
+    "EnableLeft": null,
     "id": "I"
   },
   {
+    "EnableUp": "F",
+    "EnableDown": "M",
+    "EnableRight": null,
+    "EnableLeft": null,
     "id": "J"
   },
   {
+    "EnableUp": "D",
+    "EnableDown": null,
+    "EnableRight": null,
+    "EnableLeft": null,
     "id": "K"
   },
   {
+    "EnableUp": null,
+    "EnableDown": null,
+    "EnableRight": null,
+    "EnableLeft": "K",
     "id": "L"
   },
   {
+    "EnableUp": null,
+    "EnableDown": null,
+    "EnableRight": null,
+    "EnableLeft": "I",
     "id": "M"
   }
 ]
