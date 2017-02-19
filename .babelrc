@@ -1,0 +1,23 @@
+{
+  "presets": ["react", "latest"],
+  "plugins": [
+    "transform-function-bind",
+    "transform-export-extensions",
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    "transform-runtime"
+  ],
+  "env": {
+    "development": {
+      "presets": [
+        "react-hmre"
+      ]
+    },
+    "production": {
+      "plugins": [
+        "transform-react-constant-elements",
+        "transform-react-remove-prop-types"
+      ]
+    }
+  }
+}
