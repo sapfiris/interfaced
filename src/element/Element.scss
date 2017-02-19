@@ -1,0 +1,15 @@
+@import '../styles/_variables.scss';
+
+
+.item {
+  background: transparent;
+  border: 3px solid gray;
+  border-radius: 3px;
+  margin: $block-margin;
+  position: absolute;
+  width: $block-size;
+  height: $block-size;
+  &.active {
+    background: orange;
+  }
+}

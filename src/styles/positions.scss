@@ -1,0 +1,71 @@
+@import './_variables.scss';
+$el19-w: $common-coef+$block-size+$block-margin/2;
+.el_A {
+  top: 0;
+  left: 0;
+}
+
+.el_B {
+  top: 0;
+  left: $common-coef;
+  right: $common-coef;
+  width: initial;
+}
+
+.el_C {
+  top: 0;
+  right: 0;
+}
+
+.el_D {
+  top: $common-coef;
+  left: 0;
+  bottom: $common-coef;
+  height: initial;
+}
+
+.el_E {
+  top: $common-coef;
+  left: $common-coef;
+}
+
+.el_F {
+  top: $common-coef;
+  right: $common-coef;
+}
+
+.el_G {
+  top: $common-coef;
+  right: 0;
+}
+
+.el_H {
+  bottom: $common-coef;
+  left: $common-coef;
+}
+
+.el_I {
+  bottom: $common-coef;
+  left: $common-coef + $block-size + $block-margin*4;
+}
+
+.el_J {
+  bottom: $common-coef;
+  right: 0;
+  width: $el19-w;
+}
+
+.el_K {
+  bottom: 0;
+  left: 0;
+}
+
+.el_L {
+  bottom: 0;
+  left: $common-coef;
+}
+
+.el_M {
+  right: 0;
+  bottom: 0;
+}
