@@ -13,6 +13,7 @@ class Element extends React.Component {
     constructor(props) {
         super(props);
         this._handleMouseHover = this._handleMouseHover.bind(this);
+        this._handleOnClicked = this._handleOnClicked.bind(this);
     }
 
     componentDidMount() {
@@ -23,7 +24,12 @@ class Element extends React.Component {
     }
 
     _handleMouseHover() {
-        this.props.SetSelectedId(this.props.Id);
+        this.props.SetSelectedId(this.props.Id, true);
+    }
+
+    _handleOnClicked() {
+        if (this.props.isSelected)
+            this.props.ElementClick();
     }
 
     render() {
@@ -34,7 +40,7 @@ class Element extends React.Component {
         return (
             <div ref="el" key={this.props.Id}                    
                     className={classes}
-                    onClick={this.props.ElementClick}/>);
+                    onClick={this._handleOnClicked}/>);
     }
 }
 

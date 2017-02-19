@@ -1,8 +1,10 @@
 import React from 'react';
 import Element from './element/Element';
+import Graph from 'node-dijkstra';
 
 import './styles/styles.scss';
 import elementData from './elements.json';
+import elementRoutes from './routes.json';
 
 const KEY_CODES = {
 	ENTER : 13,
@@ -12,12 +14,16 @@ const KEY_CODES = {
 	DOWN : 40
 };
 
+const route = new Graph(elementRoutes);
+
 export default class App extends React.Component {
 		constructor(props) {
 			super(props);
 			this._handleSelectItem = this._handleSelectItem.bind(this);			
 			this._handleOnClick = this._handleOnClick.bind(this);
 			this._handleKeyUp = this._handleKeyUp.bind(this);
+			this._handleMoveByArrow = this._handleMoveByArrow.bind(this);
+			this._getElementById = this._getElementById.bind(this);
 		}
 
 		state = {
@@ -32,7 +38,11 @@ export default class App extends React.Component {
 			document.removeEventListener("keyup", this._handleKeyUp);
 		}
 		
-		_handleSelectItem(nextId) {		
+		_handleSelectItem(nextId, mouse = false) {
+			if (mouse) {
+				if (!this._trySelectByMouse(nextId))
+					return;
+			}			
 			this.setState({selectedId: nextId});
 		}
 
@@ -58,7 +68,7 @@ export default class App extends React.Component {
 					this._handleMoveByArrow("EnableDown");
 					break;										
 				default:
-					console.log('can not parsed key code');
+					return;
 			}
 		}
 
@@ -69,6 +79,18 @@ export default class App extends React.Component {
 
 			if (nextItemId != undefined )		
 				this._handleSelectItem(nextItemId);
+		}
+
+		_getElementById(id) {
+			return elementData.filter(function (e) {
+				return e.id == id;
+			})[0]; 
+		}
+
+		_trySelectByMouse(focusedId) {			
+			let curElement = this._getElementById(this.state.selectedId);
+			let focusedElement = this._getElementById(focusedId);
+			return route.path(curElement.id, focusedElement.id);
 		}
 
 		render() {
